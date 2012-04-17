@@ -7,8 +7,8 @@ def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
 
-name = 'pb.recipes.pydev'
-entry_points = {'zc.buildout': ['default = %s:Sublime' % name]}
+name = 'twinhead.recipes.sublimecodeintel'
+entry_points = {'zc.buildout': ['default = %s:SublimeCodeIntel' % name]}
 
 
 setup(
@@ -32,6 +32,7 @@ setup(
     install_requires=['setuptools',
                         'zc.buildout',
                         'zc.recipe.egg',
+                        'simplejson'
                         ],
     test_suite=name + '.tests.test_suite',
     entry_points=entry_points,
