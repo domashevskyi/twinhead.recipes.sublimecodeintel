@@ -1,0 +1,4 @@
+setuptools
+zc.buildout
+zc.recipe.egg
+simplejson

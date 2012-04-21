@@ -46,12 +46,13 @@ class SublimeCodeIntel(object):
         egg_paths = filter(lambda p: p not in self._ignored_paths, egg_paths)
 
         if not os.path.exists(self._dpath):
-            os.mkdir(self._fpath)
-        f_open_type = 'r'
-        if not os.path.exists(self._fpath):
-            f_open_type = 'w'
+            os.mkdir(self._dpath)
 
-        with open(self._fpath, f_open_type) as f:
+        if not os.path.exists(self._fpath):
+            with open(self._fpath, 'w') as f:
+                f.write('{}')
+
+        with open(self._fpath, 'r') as f:
             data = json.loads(f.read() or '{}')
             if not 'Python' in data:
                 data['Python'] = {}
@@ -59,7 +60,7 @@ class SublimeCodeIntel(object):
                 data['Python']['python'] = self._python
             data['Python']['pythonExtraPaths'] = egg_paths
 
-        open(self._fpath, 'w').write(data)
+        open(self._fpath, 'w').write(json.dumps(data))
 
         return ""
 

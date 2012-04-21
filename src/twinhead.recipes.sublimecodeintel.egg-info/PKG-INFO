@@ -1,0 +1,19 @@
+Metadata-Version: 1.0
+Name: twinhead.recipes.sublimecodeintel
+Version: 0.1.0a
+Summary: Generates SublimeCodeInt configuration file with all necessary extra paths
+Home-page: https://github.com/domashevskiy/twinhead.recipes.sublimecodeintel
+Author: Dmitriy Domashevskiy
+Author-email: dmitriy.domashevskiy@gmail.com
+License: BSD
+Description: Instructions for using the recipe:
+        
+        
+        
+Keywords: buildout recipe Sublime
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Build Tools

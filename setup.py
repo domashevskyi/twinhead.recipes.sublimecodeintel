@@ -19,12 +19,12 @@ setup(
                        + "\n\n" +
                        read('CHANGES.txt')
     ),
-    version='0.1.0',
+    version='0.1.0a',
     author="Dmitriy Domashevskiy",
     author_email="dmitriy.domashevskiy@gmail.com",
     license="BSD",
     keywords="buildout recipe Sublime",
-    url='https://github.com/domashevskiy/twinhead.recipes.sublime',
+    url='https://github.com/domashevskiy/twinhead.recipes.sublimecodeintel',
     packages=find_packages('src'),
     include_package_data=True,
     package_dir={'': 'src'},
@@ -34,7 +34,6 @@ setup(
                         'zc.recipe.egg',
                         'simplejson'
                         ],
-    test_suite=name + '.tests.test_suite',
     entry_points=entry_points,
     zip_safe=True,
     classifiers=[
